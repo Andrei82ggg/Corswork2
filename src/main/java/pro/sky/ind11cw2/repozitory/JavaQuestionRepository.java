@@ -1,13 +1,14 @@
-package pro.sky.ind11cw2.service;
+package pro.sky.ind11cw2.repozitory;
 
 import org.springframework.stereotype.Service;
 import pro.sky.ind11cw2.model.Question;
 
-import java.util.*;
-
-@Service("java")
-public class JavaQuestionService implements QuestionService{
-    private final Random random = new Random();
+import java.util.Collection;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
+@Service
+public class JavaQuestionRepository implements QuestionRepository{
     private final Set<Question> questions = new HashSet<>();
     @Override
     public Question add(String question, String answer) {
@@ -31,20 +32,5 @@ public class JavaQuestionService implements QuestionService{
     @Override
     public Collection<Question> getAll() {
         return Collections.unmodifiableSet(questions);
-    }
-
-    @Override
-    public Question getRandomeQuestion() {
-        var randomIndex = random.nextInt(questions.size());
-        int index = 0;
-        var it = questions.iterator();
-        while (it.hasNext()) {
-            var question = it.next();
-            if (index == randomIndex){
-            return question;
-        }
-        index++;
-    }
-    throw new NoQuestionsFound();
     }
 }

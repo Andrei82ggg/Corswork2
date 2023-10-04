@@ -4,9 +4,8 @@ import org.springframework.stereotype.Service;
 import pro.sky.ind11cw2.model.Question;
 
 import java.util.*;
-
-@Service("java")
-public class JavaQuestionService implements QuestionService{
+@Service
+public class MathQuestionService implements QuestionService {
     private final Random random = new Random();
     private final Set<Question> questions = new HashSet<>();
     @Override
@@ -41,10 +40,10 @@ public class JavaQuestionService implements QuestionService{
         while (it.hasNext()) {
             var question = it.next();
             if (index == randomIndex){
-            return question;
+                return question;
+            }
+            index++;
         }
-        index++;
-    }
-    throw new NoQuestionsFound();
+        throw new NoQuestionsFound();
     }
 }
