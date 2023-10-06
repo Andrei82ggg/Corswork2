@@ -51,7 +51,6 @@ public class JavaQuestionService implements QuestionService{
     throw new NoQuestionsFound();
     }
 
-    public JavaQuestionServiceTest getRandomQuestion() {
-        return null;
+    public void getRandomQuestion() {
     }
 }

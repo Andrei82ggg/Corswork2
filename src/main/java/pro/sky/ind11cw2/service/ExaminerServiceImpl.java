@@ -8,7 +8,7 @@ import pro.sky.ind11cw2.service.exception.NotEnoukQuestionsException;
 import java.util.*;
 
 @Service
-public class ExaminerServiceImpl implements ExaminerService {
+public class ExaminerServiceImpl extends ExaminerService {
     private final Random random = new Random();
     private final QuestionService javaService;
     private final QuestionService mathService;

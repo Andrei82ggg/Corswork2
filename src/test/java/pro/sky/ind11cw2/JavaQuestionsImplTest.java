@@ -1,10 +1,10 @@
-package pro.sky.ind11cw2.service;
-
+package pro.sky.ind11cw2;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.junit.jupiter.MockitoExtension;
 import pro.sky.ind11cw2.model.Question;
+import pro.sky.ind11cw2.service.JavaQuestionService;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
