@@ -50,4 +50,7 @@ public class JavaQuestionService implements QuestionService{
     }
     throw new NoQuestionsFound();
     }
+
+    public void getRandomQuestion() {
+    }
 }
